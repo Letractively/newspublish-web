@@ -1,0 +1,4 @@
+2011/7/24 23:20:17|DataMake.cs|admin|在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 26 - 定位指定的服务器/实例时出错)
+2011/7/24 23:27:13|DataMake.cs|admin|在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 26 - 定位指定的服务器/实例时出错)
+2011/7/24 23:28:26|DataMake.cs|admin|已成功与服务器建立连接，但是在登录过程中发生错误。 (provider: Shared Memory Provider, error: 0 - 管道的另一端上无任何进程。)
+2011/7/24 23:31:26|DataMake.cs|admin|用户 'NewsPublish,Password=123456,Integrated Security=True' 登录失败。
