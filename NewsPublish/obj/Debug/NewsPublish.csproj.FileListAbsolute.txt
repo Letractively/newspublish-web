@@ -1,0 +1,10 @@
+F:\Conding\NewsPublic\NewsPublic\obj\Debug\ResolveAssemblyReference.cache
+F:\Conding\NewsPublic\NewsPublic\bin\NewsPublic.dll
+F:\Conding\NewsPublic\NewsPublic\bin\NewsPublic.pdb
+F:\Conding\NewsPublic\NewsPublic\obj\Debug\NewsPublic.dll
+F:\Conding\NewsPublic\NewsPublic\obj\Debug\NewsPublic.pdb
+E:\WebConding\NewsPublish\NewsPublish\bin\NewsPublish.dll
+E:\WebConding\NewsPublish\NewsPublish\bin\NewsPublish.pdb
+E:\WebConding\NewsPublish\NewsPublish\obj\Debug\ResolveAssemblyReference.cache
+E:\WebConding\NewsPublish\NewsPublish\obj\Debug\NewsPublish.dll
+E:\WebConding\NewsPublish\NewsPublish\obj\Debug\NewsPublish.pdb
