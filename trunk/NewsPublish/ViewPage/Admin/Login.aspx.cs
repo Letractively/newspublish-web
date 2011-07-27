@@ -48,13 +48,13 @@ namespace NewsPublish.ViewPage.Admin
             string userName = tb_username.Text.Trim();
             string password = tb_password.Text.Trim();
             string authCode = tb_authcode.Text.Trim().ToLower();
-            string a = Session["AuthCode"].ToString();
             if (authCode == Session["AuthCode"].ToString())
             { 
-                NewsPublish.BusinessLayer.Admin admin=new BusinessLayer.Admin();
-                if (admin.IsAdmin2(userName, password))
+                NewsPublish.BusinessLayer.Admin admin=new BusinessLayer.Admin().SelectAdmin(userName,password);
+                if(admin!=null)
                 {
-                    Response.Redirect("../ViewPage/Admin/main.html");
+                    Response.Redirect("/ViewPage/Admin/Main.aspx");
+                    Session["AdminName"] = admin.AdminName;
                 }
             }
         }
