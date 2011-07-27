@@ -82,6 +82,32 @@ namespace NewsPublish.BusinessLayer
             return DataMake.ExecuteSql(sql)>0;
         }
         /// <summary>
+        /// 获取管理员
+        /// </summary>
+        /// <returns></returns>
+        public Admin SelectAdmin(string userName,string password)
+        {
+            Admin admin = new Admin();
+            string sql = "select * from Admin where Admin_Name=@Admin_Name and Admin_PassWord=@Admin_Password";
+            SqlParameter[] parms = new SqlParameter[2];
+            parms[0] = new SqlParameter("@Admin_Name", SqlDbType.VarChar, 50);
+            parms[0].Value = userName;
+            parms[1] = new SqlParameter("@Admin_Password", SqlDbType.VarChar, 150);
+            parms[1].Value = password;
+            DataTable dt = DataMake.DataTableRead(sql,parms);
+            if (dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    admin.Id = int.Parse(dt.Rows[i][0].ToString());
+                    admin.AdminName = dt.Rows[i][1].ToString();
+                    admin.AdminPassword = dt.Rows[i][2].ToString();
+                    admin.AdminRemark = dt.Rows[i][3].ToString();
+                }
+            }
+            return admin;
+        }
+        /// <summary>
         /// 获取所有管理员
         /// </summary>
         /// <returns></returns>
@@ -114,16 +140,11 @@ namespace NewsPublish.BusinessLayer
         {
             string sql = "select Admin_Name,Admin_PassWord from Admin where Admin_Name=@userName and Admin_PassWord=@password";
             SqlParameter[] parms = new SqlParameter[2];
-            parms[0] = new SqlParameter("@userName", SqlDbType.NVarChar, 50);
+            parms[0] = new SqlParameter("@userName", SqlDbType.VarChar, 50);
             parms[0].Value = userName;
-            parms[1] = new SqlParameter("@password", SqlDbType.NVarChar, 150);
+            parms[1] = new SqlParameter("@password", SqlDbType.VarChar, 150);
             parms[1].Value = password;
             return DataMake.ExecuteSql(sql, parms)>0;
-        }
-        public bool IsAdmin2(string userName, string password)
-        {
-            string sql = "select Admin_Name,Admin_PassWord from Admin where Admin_Name='"+userName+"' and Admin_PassWord='"+password+"'";
-            return DataMake.ExecuteSql(sql) > 0;
         }
         /// <summary>
         /// 用户名是否存在
@@ -132,7 +153,7 @@ namespace NewsPublish.BusinessLayer
         /// <returns></returns>
         public bool UserNameExist(string userName)
         {
-            string sql = "select Admin_Name from Admin";
+            string sql = "select Admin_Name from Admin where Admin_Name='"+userName+"'";
             return DataMake.ExecuteSql(sql) > 0;
         }
     }

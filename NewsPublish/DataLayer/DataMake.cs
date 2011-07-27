@@ -33,6 +33,30 @@ namespace NewsPublish.DataLayer
             }
         }
         /// <summary>
+        /// 执行sql聚合语句
+        /// </summary>
+        /// <param name="sql">sql语句</param>
+        /// <returns></returns>
+        public static object ExecuteScalarSql(string sql)
+        {
+            object result = null;
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    conn.Open();
+                    result = cmd.ExecuteScalar();
+                }
+                catch (SqlException e)
+                {
+                    WriteLog.WriteLogToTxt("DataMake.cs", "admin", e.Message, DateTime.Now);
+                }
+                conn.Close();
+                return result;
+            }
+        }
+        /// <summary>
         /// 执行Sql语句
         /// </summary>
         /// <param name="sql">sql语句</param>
@@ -57,6 +81,33 @@ namespace NewsPublish.DataLayer
                 cmd.Parameters.Clear();
                 conn.Close();
                 return resultCount;
+            }
+        }
+        /// <summary>
+        /// 执行Sql聚合语句
+        /// </summary>
+        /// <param name="sql">sql语句</param>
+        /// <param name="sqlParameters">参数数组</param>
+        /// <returns></returns>
+        public static object ExecuteScalarSql(string sql, SqlParameter[] sqlParameters)
+        {
+            object result = null;
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddRange(sqlParameters);
+                try
+                {
+                    conn.Open();
+                    result = cmd.ExecuteScalar();
+                }
+                catch (SqlException e)
+                {
+                    WriteLog.WriteLogToTxt("DataMake.cs", "admin", e.Message, DateTime.Now);
+                }
+                cmd.Parameters.Clear();
+                conn.Close();
+                return result;
             }
         }
         /// <summary>

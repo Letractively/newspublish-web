@@ -61,10 +61,12 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ViewPage\Admin\left.html" />
+    <Content Include="ViewPage\Admin\Left.aspx" />
     <Content Include="ViewPage\Admin\Login.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="ViewPage\Admin\login.html" />
+    <Content Include="ViewPage\Admin\Main.aspx" />
+    <Content Include="ViewPage\Admin\Right_Top.aspx" />
+    <Content Include="ViewPage\Admin\Top.aspx" />
     <Content Include="ViewPage\Images\001.gif" />
     <Content Include="ViewPage\Images\083.gif" />
     <Content Include="ViewPage\Images\114.gif" />
@@ -82,11 +84,7 @@
     <Content Include="ViewPage\Images\login_16.gif" />
     <Content Include="ViewPage\Images\login_18.gif" />
     <Content Include="ViewPage\Images\login_img.png" />
-    <Content Include="ViewPage\Admin\main.html" />
     <Content Include="ViewPage\Admin\right.html" />
-    <Content Include="ViewPage\Admin\right_top.html" />
-    <Content Include="ViewPage\Admin\table.html" />
-    <Content Include="ViewPage\Admin\top.html" />
     <Content Include="ViewPage\CSS\main.css" />
     <Content Include="ViewPage\Images\main_02.gif" />
     <Content Include="ViewPage\Images\main_04.gif" />
@@ -108,6 +106,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewPage\Admin\Left.aspx.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPage\Admin\Left.aspx.designer.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewPage\Admin\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,6 +138,27 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewPage\Admin\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPage\Admin\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPage\Admin\Right_Top.aspx.cs">
+      <DependentUpon>Right_Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPage\Admin\Right_Top.aspx.designer.cs">
+      <DependentUpon>Right_Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPage\Admin\Top.aspx.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPage\Admin\Top.aspx.designer.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
