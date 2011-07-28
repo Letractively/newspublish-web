@@ -1,6 +1,5 @@
 #labels error
 =sql语句中的问题=
 *nvchar参数和varchar参数区别
-*command中ExecuteNonQuery的返回值只对update、insert、delete有效要返回聚合值使用ExecuteScalar
----- ---- ---- ---- ---- 
-==
+*command中ExecuteNonQuery的返回值
+只对update、insert、delete有效要返回聚合值使用ExecuteScalar
