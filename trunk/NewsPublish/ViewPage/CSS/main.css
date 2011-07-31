@@ -7,29 +7,23 @@ body{margin:0; padding:0; font-size:9pt;}
 #user{ margin-top:38px; padding-left:40px; float:left;}
 
 #main{width:100%;background:url(/ViewPage/Images/main_bg.gif) repeat-x;}
-
+/*Left.aspx*/
 #left{width:188px; float:left; background-image:url(/ViewPage/Images/main_bg.gif) ; background-repeat:repeat-x;}
-
+#left a:link{ text-decoration:none; color:Black;}
+#left a:visited{ color:Black;}
 #left_menu{ width:184px;background:url(/ViewPage/Images/main_07.gif) no-repeat; height:52px; margin-left:4px;}
-
 #left_tree{width:184px; background:url(/ViewPage/Images/main_19.gif); height:260px; margin-left:4px;}
-
 #tree_icon{width:162px; height:95px; background:url(/ViewPage/Images/main_12.gif); margin-left:11px; text-align:center;}
-
-#tree_text{ width:162px; margin-left:11px; margin-top:10px; list-style:none;}
-
+.tree_icon2{width:162px; height:95px; background-image:url(/ViewPage/Images/main_12_2.gif); margin-left:11px; text-align:center;}
+#tree_system{ width:162px; margin-left:11px; margin-top:10px; list-style:none; display:none;}
+#tree_basic{ width:162px; margin-left:11px; margin-top:10px; list-style:none;}
 .tree_li {list-style:none; line-height:25px;}
-
 .list_img{margin-right:5px; width:3px; margin-left:5px;}
-
-#yh{width:50px; height:50px; float:left; margin-left:20px; margin-top:10px; line-height:25px; color:#fff;}
+#basic{width:50px; height:50px; float:left; margin-left:20px; margin-top:10px; line-height:25px; color:#fff;}
 
 #system{width:50px; height:50px; float:right; margin-right:20px; margin-top:10px; line-height:25px; color:#fff;}
-
 #tree_down{height:17px; width:184px; margin-left:4px; margin-bottom:0px; background:url(/ViewPage/Images/main_21.gif);}
-
 #right_top{height:35px;color:#fff;background-image:url(/ViewPage/Images/main_09.gif) ; background-repeat:repeat-x;}
-
 #img{height:26px; width:35px; float:left;padding-top:5px; text-align:center;}
 
 .imgtext{ float:left; display: block; margin-top:13px; margin-left:3px;}
@@ -45,4 +39,9 @@ body{margin:0; padding:0; font-size:9pt;}
 #right_font img {padding-right:8px; margin-left:15px;}
 
 .bfont{ font-weight:bolder; font-size:9pt;}
+
+/*SystemInfo.aspx*/
+.div{ padding-top:50px;}
+#si_table{ width:400px; height:200px; margin:0 auto; background-color:#c9c9c9;}
+#si_table tr td{ height:25px; background-color:#FFFFFF;}
 

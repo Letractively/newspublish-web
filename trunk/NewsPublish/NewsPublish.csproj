@@ -65,7 +65,9 @@
     <Content Include="ViewPage\Admin\Login.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ViewPage\Admin\Main.aspx" />
+    <Content Include="ViewPage\Admin\NewsType.aspx" />
     <Content Include="ViewPage\Admin\Right_Top.aspx" />
+    <Content Include="ViewPage\Admin\SystemInfo.aspx" />
     <Content Include="ViewPage\Admin\Top.aspx" />
     <Content Include="ViewPage\Images\001.gif" />
     <Content Include="ViewPage\Images\083.gif" />
@@ -103,6 +105,7 @@
     <Content Include="ViewPage\Images\system.gif" />
     <Content Include="ViewPage\Images\sz.gif" />
     <Content Include="ViewPage\Images\user.gif" />
+    <Content Include="ViewPage\JS\jquery-1.6.2.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -145,12 +148,26 @@
     <Compile Include="ViewPage\Admin\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewPage\Admin\NewsType.aspx.cs">
+      <DependentUpon>NewsType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPage\Admin\NewsType.aspx.designer.cs">
+      <DependentUpon>NewsType.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewPage\Admin\Right_Top.aspx.cs">
       <DependentUpon>Right_Top.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewPage\Admin\Right_Top.aspx.designer.cs">
       <DependentUpon>Right_Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPage\Admin\SystemInfo.aspx.cs">
+      <DependentUpon>SystemInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPage\Admin\SystemInfo.aspx.designer.cs">
+      <DependentUpon>SystemInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewPage\Admin\Top.aspx.cs">
       <DependentUpon>Top.aspx</DependentUpon>
