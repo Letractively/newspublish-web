@@ -81,7 +81,7 @@ namespace NewsPublish.BusinessLayer
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        public static bool DeleteNewsType(string id)
+        public bool DeleteNewsType(string id)
         {
             string sql="delete from NewsType where Id="+id;
             return DataMake.ExecuteSql(sql)>0;
@@ -90,7 +90,7 @@ namespace NewsPublish.BusinessLayer
         /// 获取所有新闻类型
         /// </summary>
         /// <returns></returns>
-        public static List<NewsType> GetItems()
+        public List<NewsType> GetItems()
         {
             NewsType newsType = new NewsType();
             List<NewsType> newsTypeList = new List<NewsType>();
@@ -114,7 +114,7 @@ namespace NewsPublish.BusinessLayer
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        public static NewsType GetItem(string id)
+        public NewsType GetItem(string id)
         {
             NewsType newsType = new NewsType();
             string sql = "select * from NewsType where Id=" + id;

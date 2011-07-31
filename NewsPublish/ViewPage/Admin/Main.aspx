@@ -8,14 +8,14 @@
 </head>
 <frameset rows="60,*" cols="*" frameborder="no" border="0" framespacing="0">
   <frame src="Top.aspx" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" />
-  <frameset rows="*" cols="188,*" framespacing="0" frameborder="no" border="0">
+  <frameset  rows="*" cols="188,*" framespacing="0" frameborder="no" border="0" id="Frame">
     <frame src="Left.aspx" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" />
-    <frameset rows="73,*" cols="*">
-      <frame src="Right_Top.aspx" name="mainFrame" id="mainFrame" />
-      <frame src="right.html" />
+    <frameset rows="73,*" cols="*" id="rightFrame">
+      <frame src="Right_Top.aspx" name="mainFrame" id="right_topFrame" />
+      <frame src="SystemInfo.aspx" id="right_centerFrame"/>
     </frameset>
   </frameset>
 </frameset>
-<noframes><body>
+<body>
 </body>
-</noframes></html>
+</html>
