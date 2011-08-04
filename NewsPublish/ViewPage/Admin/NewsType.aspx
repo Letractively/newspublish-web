@@ -4,106 +4,60 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<link type="text/css" rel="Stylesheet" href="../CSS/other.css" />
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-            BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" 
-            CellPadding="3" CellSpacing="1" GridLines="None">
-            <Columns>
-                <asp:CheckBoxField HeaderText="选择" />
-                <asp:BoundField DataField="Id" HeaderText="编号" Visible="False" />
-                <asp:BoundField DataField="NewsTypeName_zh" HeaderText="中文类别" />
-                <asp:BoundField DataField="NewsTypeName_en" HeaderText="英文类别" />
-                <asp:BoundField DataField="NewsTypeRemark" HeaderText="备注" />
-            </Columns>
-            <EmptyDataTemplate>
-                &lt;H1&gt;暂时没有任何记录&lt;/H1&gt;
-            </EmptyDataTemplate>
-            <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
-            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
-            <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
-            <PagerTemplate>
-                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <div id="main">
+        <table cellpadding="0" cellspacing="1" border="0" id="table_content" class="table_content" width="100%">
+           <tr>
+              <td align="right" colspan="5">
+                 <table cellpadding="0" cellspacing="0" border="0" id="tb_toolbar" class="table_toolbar">
                     <tr>
-                        <td height="29" nowrap="nowrap" width="25%">
-                            <table border="0" cellpadding="0" cellspacing="0" width="342">
-                                <tr>
-                                    <td class="STYLE1" width="44%">
-                                        当前页：1/2页 每页 
-                                        <input class="STYLE1" name="textfield2" size="5" 
-                            style="height:14px; width:25px;" type="text" value="15" />
-                                    </td>
-                                    <td class="STYLE1" width="14%">
-                                        <img height="20" src="/ViewPage/Images/sz.gif" 
-                            width="43" />
-                                    </td>
-                                    <td class="STYLE1" width="42%">
-                                        <span class="STYLE7">数据总量 15 </span>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td class="STYLE1" valign="top" width="75%">
-                            <div align="right">
-                                <table border="0" cellpadding="0" cellspacing="0" height="20" width="352">
-                                    <tr>
-                                        <td height="22" valign="middle" width="62">
-                                            <div align="right">
-                                                <img height="20" src="/ViewPage/Images/page_first_1.gif" 
-                                    width="48" />
-                                            </div>
-                                        </td>
-                                        <td height="22" valign="middle" width="50">
-                                            <div align="right">
-                                                <img height="20" src="/ViewPage/Images/page_back_1.gif" 
-                                    width="55" />
-                                            </div>
-                                        </td>
-                                        <td height="22" valign="middle" width="54">
-                                            <div align="right">
-                                                <img height="20" src="/ViewPage/Images/page_next.gif" 
-                                    width="58" />
-                                            </div>
-                                        </td>
-                                        <td height="22" valign="middle" width="49">
-                                            <div align="right">
-                                                <img height="20" src="/ViewPage/Images/page_last.gif" 
-                                    width="52" />
-                                            </div>
-                                        </td>
-                                        <td height="22" valign="middle" width="59">
-                                            <div align="right">
-                                                转到第</div>
-                                        </td>
-                                        <td height="22" valign="middle" width="25">
-                                            <span class="STYLE7">
-                                            <input class="STYLE1" name="textfield" size="5" 
-                                style="height:10px; width:25px;" type="text" />
-                                            </span>
-                                        </td>
-                                        <td height="22" valign="middle" width="23">
-                                            页</td>
-                                        <td height="22" valign="middle" width="30">
-                                            <img height="20" src="/ViewPage/Images/go.gif" 
-                                width="26" />
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </td>
+                       <td><img src="/ViewPage/Images/001.gif" width="14" height="14" alt=""/><a href="#">新增</a></td>
+                       <td><img src="/ViewPage/Images/114.gif" width="14" height="14" alt=""/><a href="#">编辑</a></td>
+                       <td><img src="/ViewPage/Images/083.gif" width="14" height="14" alt=""/><a href="#">删除</a></td>
                     </tr>
+                 </table>
+              </td>
+           </tr>
+           <tr id="tr_title">
+              <td width="10px"><input type="checkbox" id="checkall"/></td>
+              <td width="30px" style=" display:none">编号</td>
+              <td align="center" width="20%">中文名称</td>
+              <td align="center" width="20%">英文名称</td>
+              <td align="center">备注</td>
+           </tr>
+           <asp:Repeater runat="server" ID="rp_content">
+              <ItemTemplate>
+                <tr id="tr_list">
+                    <td><input type="checkbox" id="checkall"/></td>
+                    <td style=" display:none"><%#DataBinder.Eval(Container.DataItem,"Id")%></td>
+                    <td align="center"><%#DataBinder.Eval(Container.DataItem,"NewsTypeName_zh")%></td>
+                    <td align="center"><%#DataBinder.Eval(Container.DataItem,"NewsTypeName_en")%></td>
+                    <td align="center"><%#DataBinder.Eval(Container.DataItem,"NewsTypeRemark")%></td>
+                </tr> 
+              </ItemTemplate>
+           </asp:Repeater>
+           <tr>
+              <td align="left" colspan="5">
+                <table cellpadding="0" cellspacing="0" border="0" id="tb_pagebar" class="table_pagebar">
+                   <tr>
+                     <td>当前<asp:Label runat="server" ID="lb_pageindex"></asp:Label>页</td>
+                     <td>每页<asp:Label runat="server" ID="lb_pagesize" Text="20"></asp:Label>条</td>
+                     <td></td>
+                     <td><asp:LinkButton runat="server" Text="首页" ID="lb_home"></asp:LinkButton></td>
+                     <td><asp:LinkButton runat="server" Text="上一页" ID="lb_up"></asp:LinkButton></td>
+                     <td><asp:LinkButton runat="server" Text="下一页" ID="lb_down"></asp:LinkButton></td>
+                     <td><asp:LinkButton runat="server" Text="末页" ID="lb_end"></asp:LinkButton></td>
+                     <td><asp:TextBox runat="server" ID="tb_pageindex" Text="1" Width="50px"></asp:TextBox></td>
+                     <td><asp:Button runat="server" ID="bt_goto" Text="转到"/></td>
+                   </tr>
                 </table>
-            </PagerTemplate>
-            <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
-            <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
-            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-            <SortedAscendingHeaderStyle BackColor="#594B9C" />
-            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-            <SortedDescendingHeaderStyle BackColor="#33276A" />
-        </asp:GridView>
+              </td>
+           </tr>
+        </table>
     </div>
     </form>
 </body>
