@@ -7,7 +7,7 @@
     <title></title>
     <link href="/ViewPage/CSS/main.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../JS/jquery-1.6.2.min.js"></script>
-    <script type="text/jscript" language="javascript">
+    <script type="text/javascript" language="javascript">
         $(document).ready(function () {
             $("#system>a").click(function () {
                 $("#tree_basic").hide();
@@ -19,18 +19,18 @@
                 $("#tree_icon").css("background-image", "url(/ViewPage/Images/main_12.gif)");
                 $("#tree_basic").show();
             });
-            $(".tree_li > a").click(function () {
-                var value = $(this).attr("id");
-                if (value != null) {
-                    var object = window.parent.document.getElementById("right_centerFrame");
-                    object.getAttributeNode("src").value = value;
-                }
-            })
+//            $(".tree_li > a").click(function () {
+//                var value = $(this).attr("id");
+//                if (value != null) {
+//                    var object = window.parent.document.getElementById("right_centerFrame");
+//                    object.getAttributeNode("src").value = value;
+//                }
+//            })
         })
         //在主窗口打开页面
         function OpenPage(pageName) {
             var object = window.parent.document.getElementById("right_centerFrame");
-            object.getAttributeNode("src").value = value;
+            object.getAttributeNode("src").value = pageName;
         };
     </script>
 </head>
@@ -45,26 +45,26 @@
 					</div>
                     <div id="tree_basic">
 					     <li class="tree_li">
-                              <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#" onclick="OpenPage('NewsType.aspx')">文章类型</a> 
-                              <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#">文章内容</a>
+                              <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#" onclick="OpenPage('NewsType.aspx')">文章类型</a> 
+                              <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#">文章内容</a>
                          </li>
 						 <li class="tree_li">
-                               <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#">产品类型</a>  
-                               <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#">产品内容</a>
+                               <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#">产品类型</a>  
+                               <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#">产品内容</a>
                          </li>
 					</div>
 					<div id="tree_system">
 					     <li class="tree_li">
-                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#">用户属性</a>  
-                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#">修改密码</a> 
+                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#">用户属性</a>  
+                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#">修改密码</a> 
                          </li>
 						 <li class="tree_li">
-                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#">用户查询</a>  
-                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#">数据统计</a>
+                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#">用户查询</a>  
+                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#">数据统计</a>
                          </li>
 						 <li class="tree_li">
-                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#">访问记录</a>  
-                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" /></span><a href="#">操作日志</a>
+                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#">访问记录</a>  
+                                <span class="list_img"><img src="/ViewPage/Images/list_img.gif" alt=""/></span><a href="#">操作日志</a>
                          </li>
 					</div>
 			   </div>

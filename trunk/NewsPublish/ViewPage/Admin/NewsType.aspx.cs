@@ -18,9 +18,11 @@ namespace NewsPublish.ViewPage.Admin
         /// </summary>
         private void BindData()
         {
+            int pageSize = int.Parse(lb_pagesize.Text.Trim());
+            int pageIndex = int.Parse(tb_pageindex.Text.Trim());
             NewsPublish.BusinessLayer.NewsType newsType = new BusinessLayer.NewsType();
-            this.GridView1.DataSource = newsType.GetItems();
-            this.GridView1.DataBind();
+            this.rp_content.DataSource = newsType.GetItems(pageIndex, pageSize);
+            this.rp_content.DataBind();
         }
     }
 }

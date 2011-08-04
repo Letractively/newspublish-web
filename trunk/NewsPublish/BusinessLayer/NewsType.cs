@@ -92,7 +92,6 @@ namespace NewsPublish.BusinessLayer
         /// <returns></returns>
         public List<NewsType> GetItems()
         {
-            NewsType newsType = new NewsType();
             List<NewsType> newsTypeList = new List<NewsType>();
             string sql = "select * from NewsType";
             DataTable dt = DataMake.DataTableRead(sql);
@@ -100,6 +99,30 @@ namespace NewsPublish.BusinessLayer
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
+                    NewsType newsType = new NewsType();
+                    newsType.Id = (int)dt.Rows[i]["Id"];
+                    newsType.NewsTypeName_zh = dt.Rows[i]["NewsTypeName_zh"].ToString();
+                    newsType.NewsTypeName_en = dt.Rows[i]["NewsTypeName_en"].ToString();
+                    newsType.NewsTypeRemark = dt.Rows[i]["NewsType_Remark"].ToString();
+                    newsTypeList.Add(newsType);
+                }
+            }
+            return newsTypeList;
+        }
+        /// <summary>
+        /// 获取所有新闻类型
+        /// </summary>
+        /// <returns></returns>
+        public List<NewsType> GetItems(int pageIndex,int pageSize)
+        {
+            List<NewsType> newsTypeList = new List<NewsType>();
+            string sql = "SELECT TOP "+pageSize+" * FROM ( SELECT ROW_NUMBER() OVER (ORDER BY Id) AS RowNumber,* FROM NewsType) A WHERE RowNumber > "+pageSize+"*("+pageIndex+"-1)";
+            DataTable dt = DataMake.DataTableRead(sql);
+            if (dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    NewsType newsType = new NewsType();
                     newsType.Id = (int)dt.Rows[i]["Id"];
                     newsType.NewsTypeName_zh = dt.Rows[i]["NewsTypeName_zh"].ToString();
                     newsType.NewsTypeName_en = dt.Rows[i]["NewsTypeName_en"].ToString();

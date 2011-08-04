@@ -69,6 +69,8 @@
     <Content Include="ViewPage\Admin\Right_Top.aspx" />
     <Content Include="ViewPage\Admin\SystemInfo.aspx" />
     <Content Include="ViewPage\Admin\Top.aspx" />
+    <Content Include="ViewPage\Admin\WebForm1.aspx" />
+    <Content Include="ViewPage\CSS\other.css" />
     <Content Include="ViewPage\Images\001.gif" />
     <Content Include="ViewPage\Images\083.gif" />
     <Content Include="ViewPage\Images\114.gif" />
@@ -175,6 +177,13 @@
     </Compile>
     <Compile Include="ViewPage\Admin\Top.aspx.designer.cs">
       <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPage\Admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPage\Admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

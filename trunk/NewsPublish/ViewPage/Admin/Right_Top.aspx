@@ -32,7 +32,7 @@
 			        <span class="logintext"><a href="#">退出系统</a></span>	 
 			   </div>			   		
 			   </div>
-			   <div id="right_font"><img src="/ViewPage/Images/main_14.gif"/> 您现在所在的位置：首页 → 用户信息 → <span class="bfont">操作日志</span></div>
+	 <div id="right_font"><img src="/ViewPage/Images/main_14.gif" alt=""/> 您现在所在的位置：首页 → 用户信息 → <span class="bfont">操作日志</span></div>
     </form>
 </body>
 </html>
