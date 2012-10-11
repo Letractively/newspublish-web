@@ -1,0 +1,75 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="TuanZhang.CategoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:myConvert="clr-namespace:TuanZhang.Core"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="Black"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <!--枢轴控件-->
+        <controls:Pivot Name="pi" Foreground="Black" SelectionChanged="pi_SelectionChanged">
+            <controls:Pivot.Title>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock><Run Text="团长"/></TextBlock>
+                    <TextBlock Margin="200,0,0,0"><Run Text="团长在手，团购不愁"/></TextBlock>
+                </StackPanel>
+            </controls:Pivot.Title>
+            <!--枢轴项一-->
+            <controls:PivotItem Name="pi_food" Header="餐饮美食">
+                <ListBox Name="lb_food" ItemTemplate="{StaticResource Dt_list}" Tap="lb_local_Tap"></ListBox>
+            </controls:PivotItem>
+            <!--枢轴项二-->
+            <controls:PivotItem Name="pi_play" Header="休闲娱乐">
+                <ListBox Name="lb_play" ItemTemplate="{StaticResource Dt_list}" Tap="lb_local_Tap"></ListBox>
+            </controls:PivotItem>
+            <!--枢轴项二-->
+            <controls:PivotItem Name="pi_life" Header="生活服务">
+                <ListBox Name="lb_life" ItemTemplate="{StaticResource Dt_list}" Tap="lb_local_Tap"></ListBox>
+            </controls:PivotItem>
+            <!--枢轴项二-->
+            <controls:PivotItem Name="pi_buy" Header="网上购物">
+                <ListBox Name="lb_buy" ItemTemplate="{StaticResource Dt_list}" Tap="lb_local_Tap"></ListBox>
+            </controls:PivotItem>
+            <!--枢轴项二-->
+            <controls:PivotItem Name="pi_hotel" Header="酒店旅游">
+                <ListBox Name="lb_hotel" ItemTemplate="{StaticResource Dt_list}" Tap="lb_local_Tap"></ListBox>
+            </controls:PivotItem>
+            <!--枢轴项二-->
+            <controls:PivotItem Name="pi_other" Header="其他">
+                <ListBox Name="lb_other" ItemTemplate="{StaticResource Dt_list}" Tap="lb_local_Tap"></ListBox>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+    
+</phone:PhoneApplicationPage>

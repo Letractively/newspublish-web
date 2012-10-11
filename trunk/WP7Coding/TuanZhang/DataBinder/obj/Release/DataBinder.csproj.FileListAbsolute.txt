@@ -1,0 +1,16 @@
+E:\WP7Conding\TuanZhang\DataBinder\obj\Release\ResolveAssemblyReference.cache
+E:\WP7Conding\TuanZhang\DataBinder\obj\Release\App.g.i.cs
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Release\ApplicationIcon.png
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Release\Background.png
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Release\DataBinder.dll
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Release\DataBinder.pdb
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Release\AppManifest.xaml
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Release\DataBinder.xap
+E:\WP7Conding\TuanZhang\DataBinder\obj\Release\MainPage.g.i.cs
+E:\WP7Conding\TuanZhang\DataBinder\obj\Release\DataBinder.g.resources
+E:\WP7Conding\TuanZhang\DataBinder\obj\Release\DataBinder.dll
+E:\WP7Conding\TuanZhang\DataBinder\obj\Release\DataBinder.pdb
+E:\WP7Conding\TuanZhang\DataBinder\obj\Release\XapCacheFile.xml
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Release\Microsoft.Phone.Controls.dll
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Release\Microsoft.Phone.Controls.xml
+E:\WP7Conding\TuanZhang\DataBinder\obj\Release\a.g.i.cs

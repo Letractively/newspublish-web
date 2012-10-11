@@ -1,0 +1,13 @@
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Debug\ApplicationIcon.png
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Debug\Background.png
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Debug\DataBinder.dll
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Debug\DataBinder.pdb
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Debug\AppManifest.xaml
+E:\WP7Conding\TuanZhang\DataBinder\Bin\Debug\DataBinder.xap
+E:\WP7Conding\TuanZhang\DataBinder\obj\Debug\ResolveAssemblyReference.cache
+E:\WP7Conding\TuanZhang\DataBinder\obj\Debug\DataBinder.g.resources
+E:\WP7Conding\TuanZhang\DataBinder\obj\Debug\DataBinder.dll
+E:\WP7Conding\TuanZhang\DataBinder\obj\Debug\DataBinder.pdb
+E:\WP7Conding\TuanZhang\DataBinder\obj\Debug\XapCacheFile.xml
+E:\WP7Conding\TuanZhang\DataBinder\obj\Debug\App.g.cs
+E:\WP7Conding\TuanZhang\DataBinder\obj\Debug\MainPage.g.cs
