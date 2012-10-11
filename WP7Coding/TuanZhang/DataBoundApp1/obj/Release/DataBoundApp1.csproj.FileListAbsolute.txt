@@ -1,0 +1,4 @@
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Release\ResolveAssemblyReference.cache
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Release\App.g.i.cs
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Release\Page1.g.i.cs
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Release\DataBoundApp1.g.resources

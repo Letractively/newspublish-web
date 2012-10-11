@@ -1,0 +1,14 @@
+E:\WP7Conding\TuanZhang\DataBoundApp1\Bin\Debug\ApplicationIcon.png
+E:\WP7Conding\TuanZhang\DataBoundApp1\Bin\Debug\Background.png
+E:\WP7Conding\TuanZhang\DataBoundApp1\Bin\Debug\DataBoundApp1.dll
+E:\WP7Conding\TuanZhang\DataBoundApp1\Bin\Debug\DataBoundApp1.pdb
+E:\WP7Conding\TuanZhang\DataBoundApp1\Bin\Debug\AppManifest.xaml
+E:\WP7Conding\TuanZhang\DataBoundApp1\Bin\Debug\DataBoundApp1.xap
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Debug\ResolveAssemblyReference.cache
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Debug\App.g.i.cs
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Debug\DetailsPage.g.i.cs
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Debug\MainPage.g.i.cs
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Debug\DataBoundApp1.g.resources
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Debug\DataBoundApp1.dll
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Debug\DataBoundApp1.pdb
+E:\WP7Conding\TuanZhang\DataBoundApp1\obj\Debug\XapCacheFile.xml
