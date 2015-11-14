@@ -1,0 +1,1 @@
+use net3.5 to create a web about news publish.
